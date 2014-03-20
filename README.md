@@ -23,11 +23,11 @@ the length score for a sentence t, in an article where T is defined to be the th
 *a list of stopwords is used to filter out words that do not give value, such as "and, but, or, like, etc".
 
 
-# of words in common with text title: Readers depend on article titles to give them a sense of what the article explains. Sentences with more words (*with stopwords filtered out) that are in common with the title are less likely to be unrelated to the main topic of the article, (such as the viewer's opinion -- usually unrelated).
+number of words in common with text title: Readers depend on article titles to give them a sense of what the article explains. Sentences with more words (*with stopwords filtered out) that are in common with the title are less likely to be unrelated to the main topic of the article, (such as the viewer's opinion -- usually unrelated).
 The calculation for this heuristic is fairly intuitive. The score for a sentence t and title T can be calculated like so:
 Number of words in sentence t that exist in T / Number of words in sentence t
 
-# of words in common with other sentences: sentences with more words (*with stopwords filtered out) that appear in other sentences are more likely to be describing
+number of words in common with other sentences: sentences with more words (*with stopwords filtered out) that appear in other sentences are more likely to be describing
 information mentioned in more of the article. 
 For a set S of sentences, and a sentence t in that set, this score is calculated by an average of the number of words that exist in sentence t AND every other sentence in set S.
 
