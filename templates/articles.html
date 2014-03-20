@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summarizer</title>
+  {% load static %} 
+
+  <meta name="description" content="Summarize texts and articles for school" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="{% static '/static/css/gumby.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static '/static/css/style.css' %}" rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+
+  <!-- First include gumby.js -->
+<script src="{% static '/static/js/libs/gumby.js' %}"></script>
+<!-- followed by the required UI modules -->
+<script src="{% static '/static/js/libs/ui/gumby.checkbox.js' %}"></script>
+<script src="{% static '/static/js/libs/ui/gumby.radiobtn.js' %}"></script>
+<!-- followed by gumby.init.js -->
+<script src="{% static '/static/js/libs/gumby.init.js' %}"></script>
+</head>
+
+
+<body>
+
+<div style="text-align:center;margin:0px auto;margin-top:50px;">
+
+
+{% for a in articles %}
+
+<div style="width:1000px;margin:0px auto;text-align:center;"> 
+<li class="light alert" style="background-color:#FAFAFA">
+
+ <article class="valign row">
+      <div style="text-align:left;margin:0px auto;">
+        <img src='{{ a.image }}' style="margin-left:-15px;width:250px;" />
+      </div>
+      <div style="text-align:left;width:600px;">
+        <h5><strong>{{ a.title }}</strong></h5>
+        <h6>{{ a.category }}</h6>
+        <h6>{{ a.date }}</h6>
+        <div><a href="{{ a.url }}">Read more at {{ a.source_name }} </a><img style='margin-bottom:-10px;width:28px;' src='{{ a.favicon }}'></img></div>
+        <p>{{ a.summary }}</p>
+        {% if a.cluster_list %}
+        <h6>RELATED ARTICLES:</h6>
+        {% endif %}
+        {% for c in a.cluster_list %}
+      <a style="color:#0174DF;" href="{{ c.url }}">{{ c.title }}</a><br>
+      {% endfor %}
+      </div>
+      
+    </article>
+</li>
+
+</div>
+<br>
+{% endfor %}
+
+	
+</div>
+
+
+
+
+</body>
+
+
+</html>

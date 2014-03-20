@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summarizer</title>
+  {% load static %} 
+
+  <meta name="description" content="Summarize texts and articles for school" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="{% static '/static/css/gumby.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static '/static/css/style.css' %}" rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+
+  <!-- First include gumby.js -->
+<script src="{% static '/static/js/libs/gumby.js' %}"></script>
+<!-- followed by the required UI modules -->
+<script src="{% static '/static/js/libs/ui/gumby.checkbox.js' %}"></script>
+<script src="{% static '/static/js/libs/ui/gumby.radiobtn.js' %}"></script>
+<!-- followed by gumby.init.js -->
+<script src="{% static '/static/js/libs/gumby.init.js' %}"></script>
+
+  <script>
+  	function summarize()
+  	{
+  		  $.ajaxSetup({"error":function(XMLHttpRequest,textStatus, errorThrown) {   
+      alert(textStatus);
+      alert(errorThrown);
+      alert(XMLHttpRequest.responseText);
+  }});
+
+  
+  		url = document.getElementById('urlInput').value;
+  		text = document.getElementById('textInput').value;
+
+  		if(url.length > 0)
+  		{
+  		console.log("http://localhost:3000/summarize/url/" + url);
+  		$.getJSON(("http://localhost:3000/summarize/url/" + url),
+        function(data){
+          console.log('data: ');
+          console.log(data);
+        });
+
+  		} else if(text.length > 0) 
+  		{
+  		$.getJSON(("http://localhost:3000/summarize/text/" + text),
+        function(data){
+          console.log('data: ');
+          console.log(data);
+        });
+  		}
+
+  	
+  	}
+  </script>
+</head>
+
+
+<body>
+
+<div style="text-align:center;margin:0px auto;">
+	
+
+
+  <ul style="text-align:center;margin:0px auto;align:center;padding-top:60px;">
+ 	<li><h3>Summarize Anything</h3> <br></li>
+ 	
+    <div style="display:none;margin:0px auto;width:500px;align:center;text-align:center;" class="primary alert"><p style="color:#FFFFFF"></p></div> <br>
+ 
+    <li class="field"><input id="urlInput" class="text input" type="text" placeholder="Enter a URL" style="width:500px;" /></li>
+    <li class="field"><textarea id="textInput" class="text input" style="width:500px;height:300px;" placeholder="or enter your text here"></textarea></li>
+    <li><div class="medium primary btn pretty" style="width:500px;"><a onclick="summarize()" class="switch" gumby-trigger="#modal1">Summarize</a></div></li>
+  </ul>
+
+
+	
+</div>
+
+
+
+
+</body>
+
+
+</html>
