@@ -35,7 +35,7 @@ def mainPage(request):
 def summarize_url(request, link):
 	
 
-	# url = "http://techcrunch.com/2013/07/18/never-forget-a-face-with-numbersnap/"
+
 	# scraped_content_home = BeautifulSoup(urllib2.urlopen(url).read())
 	# scraped_content_divs = scraped_content_home.find_all("div",recursive=True)
 
@@ -296,7 +296,6 @@ def getSources(request, link):
 #topics: n w b t e s m h
 	responses_total = ""
 	topics = ['derp','w','n','b','t','e','s','m','h'];
-	# top_stories = "https://news.google.com/news?cf=all&ned=au&siidp=9c05e0ca40298ca2de47bff479689ee3e1a0&ict=ln&edchanged=1&authuser=0"
 	# response = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus(link))
 	# responses_total += "%s <br><br><br><br><br>" % response 
 	for t in topics:

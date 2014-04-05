@@ -254,8 +254,6 @@ def scan_source(source_url):
 				print article_url
 				g = Goose()
 				article = g.extract(url=article_url)
-				#"http://www.sportingnews.com/ncaa-football/story/2013-09-17/week-4-exit-poll-johnny-manziel-alabama-oregon-texas-mack-brown-mariota"
-
 
 				
 
@@ -275,7 +273,7 @@ def scan_source(source_url):
 					if(article.top_image.src is not None):
 						image = article.top_image.src
 					else:
-						image = 'http://fin6.com/wp-content/uploads/2013/07/62f0ed6fcdec4833da88ca803969b2db1.jpg'
+						image = ''
 					category = ""
 					pubdate = item['pubDate']
 				
@@ -779,7 +777,7 @@ def getAverageTermFrequency(request):
 	pickle.dump(classif_nb, f, 1)
 	f.close()
 
-	return HttpResponse("TRAINED ON TF-IDF YEHA")
+	return HttpResponse("TRAINED ON TF-IDF")
 
 
 
