@@ -51,7 +51,7 @@ class Summary(object):
 		print self.summary_sentences.__len__()
 
 		for index, sentence in enumerate(self.summary_sentences):
-			#filter the stupid spam sentences
+			#filter the  spam sentences
 			if(not("related:" in sentence.lower() or sentence.isupper() )):
 				score_sentence_dict = {'score_total':0.0, 'score_position':0.0, 'score_length':0.0, 'score_title':0.0, 'score_sentence_closeness':0.0, 'score_sentence_term_frequency':0.0, 'sentence':sentence, 'sentence_tagged':self.summary_sentences_tagged[index]}
 				self.summary_scoresAndSentencesDictList.append(score_sentence_dict)

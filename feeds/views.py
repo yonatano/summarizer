@@ -46,7 +46,7 @@ from random import shuffle
 from sklearn.svm import LinearSVC
 from nltk.classify.scikitlearn import SklearnClassifier
 
-#more classier shit
+#more classier imports
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.naive_bayes import MultinomialNB

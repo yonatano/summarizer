@@ -272,14 +272,14 @@ def getSources(request, link):
 
 
 
-	#response_ENGLISH_world = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("https://news.google.com/news/section?cf=all&ned=iw_il&topic=n&siidp=ca6f83ff43e06ffd80cd67a388fb7350095e&ict=ln"))
-	#response_ENGLISH_us = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=n&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_biz = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=b&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_tech = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=tc&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_entertainement = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=e&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_sports = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=s&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_science = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=snc&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
-	#response_ENGLISH_health = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=m&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_world = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("https://news.google.com/news/section?cf=all&ned=iw_il&topic=n&siidp=ca6f83ff43e06ffd80cd67a388fb7350095e&ict=ln"))
+	#response_ENGLISH_us = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=n&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_biz = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=b&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_tech = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=tc&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_entertainement = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=e&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_sports = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=s&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_science = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=snc&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
+	#response_ENGLISH_health = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus("http://news.google.com/news/section?pz=1&cf=all&ned=us&topic=m&siidp=846c0f0cc4a8848f20a9fc96c44547fdeffc&ict=ln"))
 	#response_ENGLISH = """
 	#ENGLISH:
 	#world: %s <br><br><br>
@@ -297,11 +297,11 @@ def getSources(request, link):
 	responses_total = ""
 	topics = ['derp','w','n','b','t','e','s','m','h'];
 	# top_stories = "https://news.google.com/news?cf=all&ned=au&siidp=9c05e0ca40298ca2de47bff479689ee3e1a0&ict=ln&edchanged=1&authuser=0"
-	# response = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus(link))
+	# response = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus(link))
 	# responses_total += "%s <br><br><br><br><br>" % response 
 	for t in topics:
 		link = "https://news.google.com/news/section?cf=all&ned=au&topic=" + t + "&siidp=9c05e0ca40298ca2de47bff479689ee3e1a0&ict=ln"
-		response = constructUrlBullshit("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus(link))
+		response = constructUrl("http://pipes.yahoo.com/pipes/pipe.run?_id=cd6d2d4381f3632fcb44c1755fc9e814&_render=json&urlinput1=%s" % urllib.quote_plus(link))
 		responses_total += "%s <br><br><br><br><br>" % response 
 
 	

@@ -46,7 +46,7 @@ from random import shuffle
 from sklearn.svm import LinearSVC
 from nltk.classify.scikitlearn import SklearnClassifier
 
-#more classier shit
+#more classier imports
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.naive_bayes import MultinomialNB
@@ -225,7 +225,7 @@ def scan_source(source_url):
 
 	source = source_url
 	
-	# article = Article.objects.create(title="article_title", text="here is my text", summary="summm",url="http://www.article.com/", favicon="url_to_favicon", image="image_shit", pub_date="2013-11-20")
+	# article = Article.objects.create(title="article_title", text="here is my text", summary="summm",url="http://www.article.com/", favicon="url_to_favicon", image="image_", pub_date="2013-11-20")
 	# article.save()
 
 
@@ -489,8 +489,8 @@ def categorize_tfidf(request, article_url):
 	
 	# article_text = article.cleaned_text
 
-	raw_text = [{'message':'hello', 'score':0}, {'message':'whatsup', 'score':0}, {'message':'hi', 'score':2}, {'message':'screw you', 'score':20}, {'message':'i dont like you', 'score':30}, {'message':'i love you', 'score':0}]
-	raw_labels = ['positive', 'positive', 'positive', 'negative', 'negative', 'positive']
+	raw_text = []
+	raw_labels = []
 
 	documents = Categorized_Labeled_Article.objects.all()
 
