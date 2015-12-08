@@ -1,8 +1,7 @@
 summarizer
 ==========
 
-summarization app
-
+webcrawler for news articles that summarizes and clusters content
 
 Description: To pursue my interests in Natural Language Processing, I have been developing an algorithm for text-document summarization, more specifically for news articles. My algorithm uses weighted heuristics including sentence position, location, and other title/document similarity measures to rank sentences in order of importance. As a part of my project, I have been experimenting with classifying documents via Naive Bayes and statistical measures through word-occurrence, and tf-idf—with fairly accurate results. I am working on algorithms for clustering these documents, as well. 
 
